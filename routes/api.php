@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,5 +21,7 @@ Route::get('/user/{user}', [UserController::class,'getUser'])->name('get.user');
 Route::post('/user/register', [UserController::class,'createUser'])->name('create.user');
 Route::put('/user/{user}/update', [UserController::class,'updateUser'])->name('update.user');
 Route::delete('/user/{user}/delete', [UserController::class,'deleteUser'])->name('delete.user');
+Route::post('/image', [ImageController::class,'uploadImage'])->name('upload.image');
+
 
 
