@@ -40,7 +40,7 @@ class UserController extends Controller
     public function login(Request $resquest)
     {
         $data = $resquest->validate([
-            'email' => ['required', 'email', 'exists:user,email'],
+            'email' => ['required', 'email', 'exists:users,email'],
             'password' => ['required', 'min:8'],
         ]);
 
